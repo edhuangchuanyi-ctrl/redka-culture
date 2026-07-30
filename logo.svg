@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60">
+  <defs>
+    <linearGradient id="frameGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF3B5C"/>
+      <stop offset="50%" stop-color="#FF6B35"/>
+      <stop offset="100%" stop-color="#00E5FF"/>
+    </linearGradient>
+    <linearGradient id="crystalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF3B5C" stop-opacity="0.95"/>
+      <stop offset="40%" stop-color="#FF6B35" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#00E5FF" stop-opacity="0.85"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+    <linearGradient id="iconFill" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF3B5C"/>
+      <stop offset="50%" stop-color="#FF6B35"/>
+      <stop offset="100%" stop-color="#FF8C42"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="0.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Icon: Crystalline Hexagon Mark -->
+  <g transform="translate(30, 30)">
+    <!-- Outer hexagon frame -->
+    <polygon points="30,0 56,15 56,45 30,60 4,45 4,15"
+             fill="none" stroke="url(#frameGrad)" stroke-width="1.2" opacity="0.7"/>
+    <!-- Inner crystal facets -->
+    <polygon points="30,6 50,18 50,42 30,54 10,42 10,18"
+             fill="url(#crystalGrad)" opacity="0.12"/>
+    <!-- Upper-left facet -->
+    <polygon points="30,6 30,30 10,18" fill="url(#iconFill)" opacity="0.35"/>
+    <!-- Upper-right facet -->
+    <polygon points="30,6 50,18 30,30" fill="url(#iconFill)" opacity="0.5"/>
+    <!-- Lower-right facet -->
+    <polygon points="30,30 50,18 50,42" fill="url(#iconFill)" opacity="0.25"/>
+    <!-- Lower-left facet -->
+    <polygon points="30,30 10,18 10,42" fill="url(#iconFill)" opacity="0.2"/>
+    <!-- Bottom facet -->
+    <polygon points="30,30 50,42 30,54 10,42" fill="url(#iconFill)" opacity="0.15"/>
+    <!-- Center accent line -->
+    <line x1="30" y1="12" x2="30" y2="48" stroke="url(#frameGrad)" stroke-width="0.8" opacity="0.4"/>
+    <!-- Horizontal accent -->
+    <line x1="14" y1="30" x2="46" y2="30" stroke="url(#frameGrad)" stroke-width="0.8" opacity="0.3"/>
+    <!-- Center glowing dot -->
+    <circle cx="30" cy="30" r="2.5" fill="#00E5FF" opacity="0.9" filter="url(#glow)"/>
+    <!-- Accent corner dots -->
+    <circle cx="4" cy="15" r="1" fill="#00E5FF" opacity="0.6"/>
+    <circle cx="56" cy="15" r="1" fill="#FF6B35" opacity="0.6"/>
+    <circle cx="4" cy="45" r="1" fill="#FF6B35" opacity="0.6"/>
+    <circle cx="56" cy="45" r="1" fill="#00E5FF" opacity="0.6"/>
+    <circle cx="30" cy="0" r="1" fill="#FF3B5C" opacity="0.7"/>
+    <circle cx="30" cy="60" r="1" fill="#FF3B5C" opacity="0.7"/>
+  </g>
+
+  <!-- Brand Name -->
+  <g transform="translate(100, 0)">
+    <text x="0" y="26" font-family="'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="22" font-weight="800" letter-spacing="3" fill="url(#textGrad)"
+          filter="url(#glow)">
+      红咖文化
+    </text>
+    <text x="0" y="44" font-family="'PingFang SC','Microsoft YaHei',sans-serif"
+          font-size="9" font-weight="400" letter-spacing="1.5" fill="#64748B">
+      HONGKA CULTURE
+    </text>
+  </g>
+
+  <!-- Decorative line between icon and text -->
+  <line x1="95" y1="14" x2="95" y2="46" stroke="url(#frameGrad)" stroke-width="0.5" opacity="0.3"/>
+</svg>
